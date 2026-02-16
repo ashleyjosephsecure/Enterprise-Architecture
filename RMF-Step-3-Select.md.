@@ -1,0 +1,30 @@
+RMF Step 3: Select (Security Control Selection)
+
+Create a new file in your GitHub repository called RMF-Step-3-Select.md.
+
+This phase is about selecting Baseline Controls based on our "High Impact" categorization. Here is the architecture for Milot Motors:
+
+1. Identity & Access Management (Family: AC - Access Control)
+
+Control AC-2 (Account Management): We will implement Automated Provisioning. When an employee leaves the HHA or Lab division of Milot Motors, their access is revoked instantly across all software.
+
+Control IA-2 (Identification and Authentication): MFA is Mandatory. No employee or stakeholder can access the ERP software without a hardware token (like a YubiKey) or a biometric scan.
+
+2. Data Protection (Family: SC - System & Communications Protection)
+
+Control SC-28 (Protection of Information at Rest): All luxury vehicle telemetry and customer PII will be encrypted using AES-256.
+
+Control SC-8 (Transmission Confidentiality): All data moving between the physical location and the cloud software must use TLS 1.3 (End-to-End Encryption).
+
+3. Physical & Environmental (Family: PE - Physical & Environmental Protection)
+
+Control PE-3 (Physical Access Control): Showrooms and server rooms will use Dual-Factor Physical Access (Keycard + Biometric Thumbprint).
+
+Control PE-6 (Monitoring Physical Access): 24/7 AI-driven surveillance that alerts the SOC if an unauthorized person enters a restricted "High Impact" zone.
+
+
+
+Business Component,NIST Control ID,Technical Implementation
+Stakeholder PII,MP-6,Media Sanitization: Digital files are shredded after the retention period.
+Logistics/Inventory,CP-9,Information System Backup: Hourly redundant backups to a secondary data center.
+Balune App Code,SA-11,Developer Security Testing: Automated code scanning for vulnerabilities before every update.
