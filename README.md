@@ -16,6 +16,19 @@
 | **Vehicle Telemetry & GPS** | 🟡 MODERATE | Operational safety and anti-theft logistics. |
 | **Public Showroom Website** | 🟢 LOW | Informational only; non-critical to operations. |
 
+
+
+
+---
+
+## 🛠️ Phase  2: Select (Security Control Selection)
+*Choosing the specific NIST 800-53 safeguards based on Step 1 categorization.*
+
+* **AC-3 (Access Enforcement):** Implementing Role-Based Access Control (RBAC) to ensure Lab Processors cannot access Admissions PII.
+* **IA-5 (Authenticator Management):** Establishing a "Passwordless" culture for Milot Motors using FIDO2-compliant hardware keys.
+* **CP-9 (Information System Backup):** Establishing an off-site, immutable backup strategy for the Balune database to prevent Ransomware loss.
+* **SI-4 (System Monitoring):** Selecting SIEM (Security Information and Event Management) tools to watch for the scanning behavior we identified in the SOC phase.
+
 ---
 
 ## 🛠️ Phase 3: Control Selection (The "Locks")
